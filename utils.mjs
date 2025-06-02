@@ -2,7 +2,8 @@
 import fs from 'fs'; 
 // Clase para representar un Superhéroe 
 class Superheroe { 
-constructor (id, nombreSuperheroe, nombreReal, nombreSociedad, edad, planetaOrigen, debilidad, poder, habilidadEspecial, aliado, enemigo) { 
+constructor (id, nombreSuperheroe, nombreReal, nombreSociedad, edad, planetaOrigen, debilidad, poder, habilidadEspecial, aliado, enemigo)
+{ 
 this.id = id; 
 this.nombreSuperheroe = nombreSuperheroe; 
 this.nombreReal = nombreReal; 
@@ -31,6 +32,8 @@ export function leerSuperheroes (ruta) {
 }
 // Nueva función para agregar superhéroes 
 export function agregarSuperheroes (rutaOriginal, rutaNuevos) { 
+    console.log(rutaOriginal);
+
     const datosOriginales = fs.readFileSync(rutaOriginal, 'utf8'); 
     const datosNuevos = fs.readFileSync (rutaNuevos, 'utf8'); 
     const superheroesOriginales = JSON.parse(datosOriginales); 
